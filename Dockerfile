@@ -22,5 +22,3 @@ RUN echo "wireshark-common wireshark-common/install-setuid boolean false" | debc
 
 COPY startapp.sh /startapp.sh
 RUN chmod +x /startapp.sh
-
-EXPOSE 5900/tcp 5800/tcp
