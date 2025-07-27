@@ -15,7 +15,7 @@ COPY cshargextcap.deb /tmp/
 
 RUN echo "wireshark-common wireshark-common/install-setuid boolean false" | debconf-set-selections && \
     apt-get update && \
-    apt-get install -y --no-install-recommends wireshark && \
+    apt-get install -y --no-install-recommends wireshark adwaita-qt && \
     apt-get install -y /tmp/cshargextcap.deb || apt-get -f install -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/cshargextcap.deb
